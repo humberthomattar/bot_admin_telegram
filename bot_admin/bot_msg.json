@@ -1,0 +1,11 @@
+{
+"BOT_MSG_START" : "Olá! Por favor, escolha uma das opções abaixo:\n",
+"BOT_MSG_UNKNOWN" : "Desculpe, não entendi o seu comando. Pode repetir?",
+"BOT_MSG_MENU" : "/menu - Apresentar novamente essas opções\n/inscrever - Inscrever na lista de comunicação de indisponibilidade\n/desinscrever - Remover da lista de comunicacao de indisponibilidade\n/sistemas - Mostra lista de sistemas para verificar a disponibilidade\n",
+"BOT_MSG_INSC_OK" : "Sua inscricao foi realizada com sucesso!",
+"BOT_MSG_INSC_NOK" : "Você ja havia realizado a inscrição!",
+"BOT_MSG_INSC_ERRO" : "Ocorreu um erro na sua inscrição. Favor tentar novamente",
+"BOT_MSG_DESINSC_OK" : "Você foi removido com sucesso!",
+"BOT_MSG_DESINSC_NOK" : "Você ainda não se inscreveu!!",
+"BOT_MSG_DESINSC_ERRO" : "Ocorreu um erro na sua remoção. Favor tentar novamente"
+}
