@@ -1,1 +1,1 @@
-web: python bot_admin/bot_admin.py
+web: python run.py

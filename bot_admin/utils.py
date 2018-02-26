@@ -3,19 +3,7 @@
 
 import json
 import requests
-import logging
-
-
-def write_json(file, data):
-    try:
-        with open(file, 'w') as outfile:
-            json.dump(data, outfile)
-    except Exception as e:
-        logger.error(
-            'Não foi possível gravar no arquivos \
-            json as informações desejadas.'
-        )
-        logger.error(str(e))
+from bot_admin import *
 
 
 def load_json(file):
@@ -29,27 +17,14 @@ def load_json(file):
             return json.load(data)
     except Exception as e:
         logger.error(
-            'Erro no parser das configurações!! - Detalhamento: ' + str(e)
+            'Erro no parser dos dados!! - Detalhamento: ' + str(e)
         )
 
 
 def post_with_query_string(**kwargs):
-    """ Realizar a chamada REST - POST via módulo requests utilizando query string.
-
-    :usage:
-            t = utils.post_with_query_string(
-                      url=url, params={'key1': int1, 'key2': value2}
-            )
-            OR
-            params = {
-                        'key_1': value_1,
-                        'key_2': 'value_2'
-                    }
-
-            t = utils.post_with_query_string(url=url, params=params)
-
-    :param:  Endereço da API/ metodo POST que será consumido.
-    :param: params: params é uma dict utilizada na query string.
+    """ Realizar a chamada REST/POST via modulo requests utilizando query string.
+    :param:  Endereco da API/ metodo POST que sera consumido.
+    :param: params: params � uma dict utilizada na query string.
     :return: Retorna o objeto request com seus atributos.
     """
     try:
@@ -61,14 +36,5 @@ def post_with_query_string(**kwargs):
         )
     except Exception as e:
         logger.error(str(e))
-        return False
+        return
 
-MSG = load_json('bot_msg.json')
-
-logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s - %(name)s [%(levelname)-8s]: %(message)s',
-    datefmt='%a, %d %b %Y %H:%M:%S'
-)
-
-logger = logging.getLogger(__name__)
